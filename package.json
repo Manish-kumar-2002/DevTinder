@@ -1,0 +1,27 @@
+{
+  "name": "devtinder",
+  "version": "1.0.0",
+  "description": "DevTinder | Make Dev Friends & Meet New People",
+  "main": "index.js",
+  "scripts": {
+    "start": "node arc/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manish-kumar-2002/DevTinder.git"
+  },
+  "keywords": [
+    "node.js",
+    "javascript"
+  ],
+  "author": "Manish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manish-kumar-2002/DevTinder/issues"
+  },
+  "homepage": "https://github.com/Manish-kumar-2002/DevTinder#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
