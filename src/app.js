@@ -17,6 +17,26 @@ app.post("/signup", async (req,res) =>{
   }
 })
 
+app.get("/alluser",async (req,res)=>{
+  
+  try{
+    const userAll = await User.find({})
+    res.send(userAll)
+  }catch(err){
+    res.status(404).send("somthing went worng!")
+  }
+})
+
+app.get("/userfindbyemail",async (req,res)=>{
+  const userEmail = req.body.emailId
+  try{
+    const userFindByEmail = await User.find({emailId:userEmail})
+    res.send(userFindByEmail)
+  }catch(err){
+    res.status(404).send("somthing went worng!")
+  }
+})
+
 connectDB().then(()=>{
   console.log("DataBase Connection established...");
   app.listen(7777, () => {
@@ -25,3 +45,4 @@ connectDB().then(()=>{
 }).catch((err)=>{
   console.log("DataBase connot be connected!!");
 })
+
